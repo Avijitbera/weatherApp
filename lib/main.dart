@@ -11,6 +11,43 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+          theme: ThemeData(
+                // Define the default brightness and colors.
+                brightness: Brightness.light,
+                primaryColor: Colors.cyan[500],
+                accentColor: Colors.lightBlue[800],
+
+                // Define the default font family.
+                fontFamily: 'Georgia',
+//                 fontFamily: 'Poppins-Regular',
+
+                // Define the default TextTheme. Use this to specify the default
+                // text styling for headlines, titles, bodies of text, and more.
+                textTheme: TextTheme(
+                  headline1: TextStyle(
+                    color: Color(0xff314862),
+                    fontSize: 21,
+                    letterSpacing: 0.6,
+                  ),
+                  // headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+                  // bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+                ),
+                appBarTheme: AppBarTheme(
+                    textTheme: TextTheme(
+                        headline6: TextStyle(
+                          color: Color(0xff314862),
+                          fontSize: 21,
+                          letterSpacing: 0.6,
+                        ),
+                        bodyText2: TextStyle(color: Colors.black)),
+                    color:  Colors.white
+                    ),
+              ),
+              darkTheme: ThemeData(
+                brightness: Brightness.dark,
+                /* dark theme settings */
+              ),
+              themeMode: ThemeMode.light,
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
